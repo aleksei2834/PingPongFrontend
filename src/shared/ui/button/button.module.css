@@ -1,0 +1,81 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  width: auto;
+  min-width: fit-content;
+  height: 41px;
+  padding: 13px 34px;
+  color: var(--button-color-text);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0%;
+  border: none;
+  border-radius: 41px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary {
+  background: var(--color-accent);
+}
+
+.primary:disabled {
+  color: var(--button-color-text);
+  background: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--button-color-hover);
+}
+
+.primary:active:not(:disabled) {
+  color: var(--color-card-input);
+  background: var(--button-pressed-color);
+  color: var(--button-color-text);
+}
+
+.secondary {
+  background: var(--color-card-input);
+  border: 1px solid var(--color-accent);
+}
+
+.secondary:disabled {
+  color: var(--color-disabled-text);
+  border-color: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+.secondary:hover:not(:disabled) {
+  color: var(--color-caption);
+  border-color: var(--color-button-hover);
+}
+
+.secondary:active:not(:disabled) {
+  border-color: var(--color-link-button-pressed);
+}
+
+.tertiary {
+  align-items: center;
+  color: var(--color-text);
+  text-decoration: none;
+  background: var(--color-card-input);
+  border: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-link-button-pressed);
+  outline-offset: 2px;
+}
+
+.loading {
+  background-color: var(--color-accent);
+  cursor: default;
+}
+
+.loading:hover {
+  background-color: var(--color-accent);
+}

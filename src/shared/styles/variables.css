@@ -1,0 +1,10 @@
+:root {
+  --color-text: #000b;
+  --color-accent: #1274ff;
+  --color-disabled: #6b7a8f;
+  --color-caption: #b4b3b3;
+  --button-color-text: #fff;
+  --button-color-hover: #4d8fec;
+  --card-color-input: #fff;
+  --button-pressed-color: #0c4ca7;
+}
