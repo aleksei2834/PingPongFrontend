@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Document Template</title>
+  <style>
+
+    p {
+         margin:0;
+    }
+    
+    body {
+        margin:0;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        min-height:100vh;
+    }
+    .box {
+
+        width: 430px;
+        height: 450px;
+        border-radius: 30px;
+        border: 1px solid #A9A9A9 ;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .child-box {
+        width: 283px;
+        height: 338px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 45px;
+
+    }
+    .text-box {
+        width: 283px;
+        height: 175px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        gap: 30px;
+    }
+    .logo {
+        width: 163px;
+        height: 68px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        gap: 15px;
+
+    }
+    .content {
+        height: 59px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+        gap: 8px;
+
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 500;
+        color: #A9A9A9;
+        text-align: center;
+
+    }
+   
+
+    .button {
+        width: 158px;
+        height: 45px;
+        border-radius: 41px;
+        border: 1px solid rgba(255,244,244,.15);
+
+        background-color: #1274FF;
+        
+        font-family: Vorhersehbar;
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+
+    }
+    .footer {
+        width: 100%;
+        height: 28px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        gap: 16px;
+    }
+    .divider {
+         width: 280px;
+         border-top: 1px solid #A9A9A9;
+    }
+
+
+
+  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class=" box">
+        <div class = "child-box">
+            <div class = "text-box">
+                <div class = "logo">
+                    <p style="
+                    font-family: Amaranth;
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: #1274FF;
+                    text-align: center;
+                    "> Ping-Pong</p>
+
+                    <p style="
+                    font-family: Vorhersehbar;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #000000;
+                    text-align: center;
+                    ">Confirm your email</p>
+
+                </div>
+                
+                <div class = "content">
+                    <p>Hello, {{UserName}}</p>
+                    <p>Please confirm your email address to activate your account.</p>
+                </div>
+            </div>
+
+            <a href="{{ConfirmationLink}}" class = "button">
+              Confirm email
+            </a>
+               
+            
+            <div class = "footer">
+                <div class ="divider"></div>
+                <p style="
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-weight: 500;
+                    color: #A9A9A9;
+                    text-align: center;
+                    "> © 2026 PingPong. All Rights Reserved
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+  
+</body>
+</html>
