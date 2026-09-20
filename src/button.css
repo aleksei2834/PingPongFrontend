@@ -1,0 +1,107 @@
+:root {
+  --accent-default: #1274ff;
+  --accent-clicked: #0f5fcc;
+  --accent-hover: #3b8cff;
+
+  --danger-background: #4a1d20;
+  --danger: #ed4245;
+  --notification: #f23f42;
+  --danger-clicked: #c7393b;
+
+  --border: #a9a9a9;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.user-panel-btn {
+  width: 32px;
+  height: 32px;
+  padding: 3px;
+  color: white;
+}
+
+.user-panel-btn:hover {
+  color: var(--accent-hover);
+}
+
+.btn-string {
+  width: fit-content;
+  color: var(--accent-default);
+}
+
+.btn-string:hover {
+  color: var(--accent-hover);
+}
+
+.btn-string:active {
+  color: var(--accent-clicked);
+}
+
+.btn-string-danger {
+  width: fit-content;
+  color: var(--border);
+}
+
+.btn-string-danger:hover {
+  color: var(--danger);
+}
+
+.btn-string-danger:active {
+  color: var(--danger-clicked);
+}
+
+.server {
+  width: 48px;
+  height: 48px;
+
+  --border-color: white;
+}
+
+.server:hover {
+  --border-color: var(--accent-default);
+}
+
+.user-panel-btn-setting {
+  width: 39px;
+  height: 26px;
+  border-radius: 6px;
+
+  padding: 3px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.user-panel-btn-setting:hover {
+  background-color: var(--border);
+}
+
+.chevronDown:hover,
+.microfone:hover {
+  color: var(--accent-default);
+}
