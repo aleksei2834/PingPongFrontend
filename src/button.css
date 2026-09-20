@@ -9,12 +9,14 @@
   --danger-clicked: #c7393b;
 
   --border: #a9a9a9;
+  --background-hover: #a9a9a940;
 }
 
 @font-face {
   font-family: 'Inter';
   src: url('../assets/fonts/Inter-Regular.woff2') format('woff2');
   font-weight: 500;
+  font-size: 14px;
   font-style: normal;
 }
 
@@ -33,6 +35,30 @@
   padding: 0;
   background: none;
   cursor: pointer;
+}
+
+.def-btn-big {
+  width: 158px;
+  height: 42px;
+
+  font-family: 'Vorhersehbar';
+  font-weight: 400;
+  font-size: 14px;
+
+  background-color: var(--accent-default);
+  border-radius: 99px;
+}
+
+.def-btn-medium {
+  width: 104px;
+  height: 42px;
+
+  font-family: 'Vorhersehbar';
+  font-weight: 400;
+  font-size: 14px;
+
+  background-color: var(--accent-default);
+  border-radius: 99px;
 }
 
 .user-panel-btn {
@@ -80,11 +106,11 @@
 }
 
 .server:hover {
-  --border-color: var(--accent-default);
+  --border-color: var(--accent-hover);
 }
 
 .user-panel-btn-setting {
-  width: 39px;
+  width: fit-content;
   height: 26px;
   border-radius: 6px;
 
@@ -93,15 +119,34 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 2px;
+  justify-content: space-between;
 }
 
 .user-panel-btn-setting:hover {
-  background-color: var(--border);
+  background-color: var(--background-hover);
 }
 
-.chevronDown:hover,
+.chevrondown:hover {
+  color: var(--accent-hover);
+}
+
+.microfone {
+  border-right: 1px solid transparent;
+}
+
+.headphones:hover {
+  color: var(--accent-default);
+}
+
 .microfone:hover {
   color: var(--accent-default);
+  border-right: 1px solid black;
+}
+
+.user-panel-btn-setting:has(.chevrondown:hover) .microfone {
+  border-right: 1px solid black;
+}
+
+.settings:hover {
+  color: var(--accent-hover);
 }
