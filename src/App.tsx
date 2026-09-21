@@ -1,9 +1,9 @@
 import Button from './button';
-// import { SettingsIcon } from './assets/icons/Icon';
+
 function App() {
   return (
-    <Button type="button" className="def-btn-medium" onClick={() => console.log('clicked')}>
-      <span>Send</span>
+    <Button type="button" className="btn-string-accent" onClick={() => console.log('clicked')}>
+      sent
     </Button>
   );
 }
