@@ -21,7 +21,7 @@
 }
 
 .button {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -37,10 +37,7 @@
   cursor: pointer;
 }
 
-.def-btn-big {
-  width: 158px;
-  height: 42px;
-
+.def-btn {
   font-family: 'Vorhersehbar';
   font-weight: 400;
   font-size: 14px;
@@ -49,16 +46,14 @@
   border-radius: 99px;
 }
 
-.def-btn-medium {
+.large {
+  width: 158px;
+  height: 42px;
+}
+
+.medium {
   width: 104px;
   height: 42px;
-
-  font-family: 'Vorhersehbar';
-  font-weight: 400;
-  font-size: 14px;
-
-  background-color: var(--accent-default);
-  border-radius: 99px;
 }
 
 .user-panel-btn {
@@ -72,22 +67,29 @@
   color: var(--accent-hover);
 }
 
-.btn-string {
+.btn-string-accent {
   width: fit-content;
   color: var(--accent-default);
 }
 
-.btn-string:hover {
-  color: var(--accent-hover);
-}
-
-.btn-string:active {
-  color: var(--accent-clicked);
+.btn-string-simple {
+  width: fit-content;
+  color: white;
 }
 
 .btn-string-danger {
   width: fit-content;
   color: var(--border);
+}
+
+.btn-string-simple:hover,
+.btn-string-accent:hover {
+  color: var(--accent-hover);
+}
+
+.btn-string-simple:active,
+.btn-string-accent:active {
+  color: var(--accent-clicked);
 }
 
 .btn-string-danger:hover {
@@ -126,6 +128,7 @@
   background-color: var(--background-hover);
 }
 
+.settings:hover,
 .chevrondown:hover {
   color: var(--accent-hover);
 }
@@ -145,8 +148,4 @@
 
 .user-panel-btn-setting:has(.chevrondown:hover) .microfone {
   border-right: 1px solid black;
-}
-
-.settings:hover {
-  color: var(--accent-hover);
 }

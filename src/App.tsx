@@ -2,8 +2,8 @@ import Button from './button';
 
 function App() {
   return (
-    <Button type="button" className="btn-string-accent" onClick={() => console.log('clicked')}>
-      sent
+    <Button type="button" size="medium" className="def-btn" onClick={() => console.log('clicked')}>
+      <span>Log In</span>
     </Button>
   );
 }
