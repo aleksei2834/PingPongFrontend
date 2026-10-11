@@ -1,10 +1,7 @@
-interface IIcon {
-  width?: number;
-  height?: number;
-  className?: string;
-}
+import type { SVGProps } from 'react';
+type IconsProps = SVGProps<SVGSVGElement>;
 
-export function NotificationIcon({ width = 20, height = 24 }: IIcon) {
+export function NotificationIcon({ width = 20, height = 24, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -12,6 +9,7 @@ export function NotificationIcon({ width = 20, height = 24 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M8.7701 23.2H23.1693C25.4478 23.2 26.7485 20.9931 25.3813 19.4465C24.7761 18.7619 24.4031 17.9499 24.3028 17.0983L23.7455 12.3702C23.445 9.82076 21.4684 7.72863 18.7985 6.84839V6.72394C18.7985 5.21955 17.532 4 15.9697 4C14.4074 4 13.1409 5.21955 13.1409 6.72394V6.84839C10.471 7.72863 8.49441 9.82076 8.19391 12.3702L7.63662 17.0983C7.53625 17.9499 7.16326 18.7619 6.55804 19.4465C5.19091 20.9931 6.49155 23.2 8.7701 23.2Z"
@@ -25,7 +23,7 @@ export function NotificationIcon({ width = 20, height = 24 }: IIcon) {
   );
 }
 
-export function ChatIcon({ width = 23, height = 18 }: IIcon) {
+export function ChatIcon({ width = 23, height = 18, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -33,6 +31,7 @@ export function ChatIcon({ width = 23, height = 18 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M10.0714 7.07421C14.0164 6.73128 17.9837 6.73128 21.9286 7.07421L23.8293 7.23943C25.0945 7.34942 26.1782 8.1041 26.7397 9.18362C26.8115 9.32172 26.7577 9.48893 26.6253 9.57087L18.7396 14.4525C17.0483 15.4995 14.9157 15.5215 13.2033 14.5095L5.26483 9.81865C5.13658 9.74286 5.07771 9.58686 5.13551 9.44956C5.64917 8.22935 6.80402 7.35824 8.17079 7.23943L10.0714 7.07421Z"
@@ -46,7 +45,7 @@ export function ChatIcon({ width = 23, height = 18 }: IIcon) {
   );
 }
 
-export function FriendsIcon({ width = 27, height = 23 }: IIcon) {
+export function FriendsIcon({ width = 27, height = 23, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -54,6 +53,7 @@ export function FriendsIcon({ width = 27, height = 23 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M10.0707 4.41493C9.53384 4.49162 8.77284 4.74529 8.20651 5.03435C6.07689 6.13161 4.76136 8.5503 5.02092 10.8923C5.1861 12.4084 5.77603 13.6118 6.87329 14.6501C8.41299 16.1131 10.519 16.6441 12.5779 16.0836C13.681 15.7828 14.855 15.01 15.5983 14.0897C18.4712 10.5265 16.4773 5.22903 11.9584 4.43853C11.4039 4.34414 10.6429 4.33234 10.0707 4.41493Z"
@@ -75,7 +75,7 @@ export function FriendsIcon({ width = 27, height = 23 }: IIcon) {
   );
 }
 
-export function PlusIcon({ width = 16, height = 16 }: IIcon) {
+export function PlusIcon({ width = 16, height = 16, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -83,6 +83,7 @@ export function PlusIcon({ width = 16, height = 16 }: IIcon) {
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M8 4V12M12 8L4 8"
@@ -94,7 +95,7 @@ export function PlusIcon({ width = 16, height = 16 }: IIcon) {
   );
 }
 
-export function AddServerIcon({ width = 48, height = 48 }: IIcon) {
+export function AddServerIcon({ width = 48, height = 48, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -102,6 +103,7 @@ export function AddServerIcon({ width = 48, height = 48 }: IIcon) {
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <rect
         x="1"
@@ -121,7 +123,7 @@ export function AddServerIcon({ width = 48, height = 48 }: IIcon) {
   );
 }
 
-export function MicrofoneIcon({ width = 19, height = 20, className }: IIcon) {
+export function MicrophoneIcon({ width = 19, height = 20, className, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -130,6 +132,7 @@ export function MicrofoneIcon({ width = 19, height = 20, className }: IIcon) {
       viewBox="0 0 19 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M5.91895 0.0560818C5.54785 0.122878 5.31777 0.197097 5.00234 0.352957C4.05234 0.816824 3.325 1.68147 3.03555 2.68714L2.9502 2.98401V6.58362V10.1832L3.0541 10.5098C3.25078 11.1407 3.54395 11.6231 4.01152 12.0832C4.4791 12.5471 4.93926 12.8217 5.55527 13.011C5.85957 13.1037 5.92637 13.1112 6.56836 13.1112C7.21035 13.1112 7.27715 13.1037 7.58145 13.011C8.19746 12.8217 8.65762 12.5471 9.1252 12.0832C9.59277 11.6231 9.88594 11.1407 10.0826 10.5098L10.1865 10.1832V6.58362V2.98401L10.1012 2.68714C9.81172 1.68147 9.08437 0.816824 8.13438 0.352957C7.48125 0.0301046 6.66855 -0.0775118 5.91895 0.0560818Z"
@@ -143,7 +146,7 @@ export function MicrofoneIcon({ width = 19, height = 20, className }: IIcon) {
   );
 }
 
-export function ChevronDownIcon({ width = 9, height = 19, className }: IIcon) {
+export function ChevronDownIcon({ width = 9, height = 19, className, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -152,6 +155,7 @@ export function ChevronDownIcon({ width = 9, height = 19, className }: IIcon) {
       viewBox="0 0 9 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M0.480029 7.56253C0.298664 7.6029 0.133146 7.73578 0.0503873 7.90566C0.00988821 7.99144 0.00108407 8.02844 0.0028449 8.14954C0.0028449 8.41866 -0.166195 8.23701 2.10175 10.4068C3.46992 11.7154 4.14431 12.3495 4.1989 12.3781C4.32744 12.4437 4.47711 12.4672 4.61093 12.4403C4.6708 12.4285 4.75708 12.3999 4.8011 12.3781C4.85569 12.3495 5.53008 11.7154 6.89825 10.4068C9.16619 8.23701 8.99716 8.41866 8.99716 8.14954C8.99716 8.02844 8.99011 7.99144 8.94785 7.90229C8.79994 7.59281 8.40552 7.46161 8.08329 7.61467C8.0375 7.63654 7.40008 8.23364 6.25731 9.32357L4.5 11.0005L2.74269 9.32357C1.59463 8.2286 0.962496 7.63654 0.916715 7.61467C0.782892 7.55244 0.617374 7.53226 0.480029 7.56253Z"
@@ -161,7 +165,7 @@ export function ChevronDownIcon({ width = 9, height = 19, className }: IIcon) {
   );
 }
 
-export function HeadphonesIcon({ width = 19, height = 19, className }: IIcon) {
+export function HeadphonesIcon({ width = 19, height = 19, className, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -170,6 +174,7 @@ export function HeadphonesIcon({ width = 19, height = 19, className }: IIcon) {
       viewBox="0 0 19 19"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g opacity="0.8">
         <path
@@ -181,7 +186,7 @@ export function HeadphonesIcon({ width = 19, height = 19, className }: IIcon) {
   );
 }
 
-export function SettingsIcon({ width = 19, height = 19, className }: IIcon) {
+export function SettingsIcon({ width = 19, height = 19, className, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -190,6 +195,7 @@ export function SettingsIcon({ width = 19, height = 19, className }: IIcon) {
       viewBox="0 0 25 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M20.9055 14.3816L20.5219 14.1753C20.0654 13.9303 19.7927 13.4906 19.7927 13C19.7927 12.5094 20.0654 12.0697 20.5219 11.8247L20.9055 11.6184C21.9526 11.0552 22.3107 9.81207 21.7062 8.83764L20.9769 7.66236C20.3739 6.68996 19.0328 6.35611 17.9885 6.91729L17.605 7.12289C17.1485 7.36854 16.6023 7.36854 16.1465 7.12289C15.69 6.87725 15.4173 6.43821 15.4173 5.94761V5.53571C15.4173 4.41336 14.4357 3.5 13.2296 3.5H11.7711C10.565 3.5 9.58345 4.41336 9.58345 5.53571V5.94829C9.58345 6.43889 9.31071 6.87793 8.85422 7.12357C8.39772 7.36854 7.85225 7.36921 7.39576 7.12357L7.01218 6.91729C5.96792 6.35611 4.62687 6.68996 4.02307 7.66236L3.29384 8.83764C2.68931 9.81207 3.04736 11.0559 4.09453 11.6184L4.47884 11.8247C4.93533 12.0697 5.20807 12.5094 5.20807 13C5.20807 13.4906 4.93533 13.9303 4.47884 14.1753L4.09526 14.3816C3.04809 14.9441 2.69004 16.1879 3.29457 17.1624L4.0238 18.3376C4.6276 19.31 5.96865 19.6439 7.01218 19.0827L7.39576 18.8771C7.85225 18.6308 8.39772 18.6321 8.85422 18.8771C9.31071 19.1228 9.58345 19.5618 9.58345 20.0524V20.4643C9.58345 21.5866 10.565 22.5 11.7711 22.5H13.2296C14.4357 22.5 15.4173 21.5866 15.4173 20.4643V20.0517C15.4173 19.5611 15.69 19.1221 16.1465 18.8764C16.6023 18.6315 17.1485 18.6308 17.605 18.8764L17.9885 19.0827C19.0328 19.6432 20.3739 19.3094 20.9769 18.3376L21.7062 17.1624C22.3107 16.1879 21.9526 14.9441 20.9055 14.3816ZM12.5004 16.3929C10.4899 16.3929 8.85422 14.8708 8.85422 13C8.85422 11.1292 10.4899 9.60714 12.5004 9.60714C14.5109 9.60714 16.1465 11.1292 16.1465 13C16.1465 14.8708 14.5109 16.3929 12.5004 16.3929Z"
@@ -199,7 +205,7 @@ export function SettingsIcon({ width = 19, height = 19, className }: IIcon) {
   );
 }
 
-export function CreateChatIcon({ width = 24, height = 24 }: IIcon) {
+export function CreateChatIcon({ width = 24, height = 24, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -207,6 +213,7 @@ export function CreateChatIcon({ width = 24, height = 24 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M13 16H16M16 16H19M16 16V13M16 16V19"
@@ -226,15 +233,15 @@ export function CreateChatIcon({ width = 24, height = 24 }: IIcon) {
   );
 }
 
-export function CrossIcon({ width = 12, height = 12, className = 'btn-string-danger' }: IIcon) {
+export function CrossIcon({ width = 12, height = 12, ...props }: IconsProps) {
   return (
     <svg
       width={width}
       height={height}
-      className={className}
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M10.8285 6.1716L5.17163 11.8285M10.8285 11.8284L5.17163 6.17157"
@@ -246,7 +253,7 @@ export function CrossIcon({ width = 12, height = 12, className = 'btn-string-dan
     </svg>
   );
 }
-export function MagnifyingGlassIcon({ width = 32, height = 32 }: IIcon) {
+export function SearchIcon({ width = 32, height = 32, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -254,16 +261,17 @@ export function MagnifyingGlassIcon({ width = 32, height = 32 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M14.0645 8.12994C12.5239 8.20806 11.0301 8.88619 9.89573 10.0206C8.97386 10.9424 8.34573 12.1268 8.11448 13.3799C7.58948 16.2237 8.98011 19.0268 11.5645 20.3424C12.9832 21.0643 14.6707 21.2299 16.2176 20.7956C16.7707 20.6393 17.5582 20.2862 17.9582 20.0081L18.1426 19.8831L20.0332 21.7643C21.7395 23.4674 21.9426 23.6581 22.127 23.7487C23.0801 24.2081 24.1614 23.4081 23.9739 22.3831C23.8989 21.9768 23.902 21.9799 21.8489 19.9268L19.9489 18.0268L20.2051 17.5237C20.6364 16.6737 20.8332 15.9643 20.9114 15.0174C21.0489 13.2987 20.4301 11.5206 19.2395 10.2268C18.6364 9.56744 17.977 9.08619 17.1739 8.71431C16.6926 8.49244 16.5145 8.42681 16.0676 8.31431C15.3989 8.14556 14.8145 8.09244 14.0645 8.12994ZM15.1739 10.2674C16.9082 10.5518 18.3145 11.8674 18.7145 13.5799C19.052 15.0206 18.6364 16.5268 17.6114 17.5924C16.7676 18.4674 15.6676 18.9393 14.4645 18.9393C13.3051 18.9393 12.2114 18.4831 11.3801 17.6549C10.7676 17.0393 10.3707 16.3018 10.1832 15.4299C10.0864 14.9737 10.0864 14.1831 10.1864 13.7237C10.4426 12.5237 11.1114 11.5487 12.127 10.8924C12.6457 10.5549 13.202 10.3549 13.9082 10.2424C14.1145 10.2081 14.9176 10.2237 15.1739 10.2674Z"
-        fill="currentColor"
+        fill="black"
       />
     </svg>
   );
 }
 
-export function PhoneIcon({ width = 32, height = 32 }: IIcon) {
+export function PhoneIcon({ width = 32, height = 32, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -271,6 +279,7 @@ export function PhoneIcon({ width = 32, height = 32 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M11.7954 8.55356C11.5786 8.63559 11.4936 8.69419 11.022 9.09262C10.4653 9.56137 10.2866 9.7313 10.0815 9.98032C9.4458 10.7567 9.09716 11.6532 9.02978 12.6844C8.97119 13.5926 9.12646 14.4715 9.52783 15.5321C9.66845 15.9012 10.1519 16.8387 10.4302 17.284C11.5376 19.0565 13.3101 20.9754 14.8276 22.0536C16.9839 23.5799 19.1167 23.9051 20.9302 22.9823C21.3257 22.7801 21.6099 22.578 22.0698 22.1678C22.7935 21.5233 22.9165 21.368 22.9692 21.0428C23.0542 20.5096 22.729 20.0555 21.5659 19.0653C20.7397 18.3592 20.2007 18.0809 19.6851 18.0809C19.187 18.0838 18.8882 18.2625 18.0561 19.0565C17.8276 19.2762 17.5962 19.4725 17.52 19.5077C16.8667 19.8299 16.0024 19.4374 14.8862 18.3182C14.0601 17.4891 13.3276 16.5428 12.9702 15.8456C12.6333 15.1834 12.563 14.6795 12.7563 14.2665C12.8413 14.0848 12.9731 13.9442 13.2749 13.7215C13.5708 13.5018 14.1245 13.0125 14.2534 12.8573C14.3091 12.787 14.3999 12.6405 14.4497 12.5321C14.5259 12.3651 14.5464 12.286 14.5581 12.0633C14.5757 11.7088 14.5024 11.4159 14.2739 10.9442C14.0776 10.537 13.5444 9.68149 13.2485 9.30063C12.7358 8.63852 12.2466 8.38657 11.7954 8.55356Z"
@@ -280,7 +289,7 @@ export function PhoneIcon({ width = 32, height = 32 }: IIcon) {
   );
 }
 
-export function CameraIcon({ width = 32, height = 32 }: IIcon) {
+export function CameraIcon({ width = 32, height = 32, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -288,6 +297,7 @@ export function CameraIcon({ width = 32, height = 32 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M8.4668 10.7747C7.77773 10.9645 7.20117 11.5727 7.05703 12.2582C6.97969 12.6133 6.97969 19.3774 7.05703 19.7325C7.20469 20.4286 7.78125 21.0297 8.48086 21.2161C8.77969 21.2969 17.3684 21.2934 17.6707 21.2161C18.3176 21.0473 18.852 20.5375 19.0664 19.8942L19.1508 19.634V15.9954C19.1508 12.5711 19.1473 12.3426 19.0875 12.1457C18.8801 11.4672 18.3422 10.9434 17.6742 10.7747C17.4949 10.7289 16.8902 10.7219 13.0512 10.7254C9.4582 10.7289 8.60742 10.736 8.4668 10.7747Z"
@@ -301,7 +311,7 @@ export function CameraIcon({ width = 32, height = 32 }: IIcon) {
   );
 }
 
-export function AddToChatIcon({ width = 32, height = 32 }: IIcon) {
+export function AddToChatIcon({ width = 32, height = 32, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -309,6 +319,7 @@ export function AddToChatIcon({ width = 32, height = 32 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M14.3179 8.479C13.2742 8.63213 12.3586 8.96963 11.5273 9.51338C9.84606 10.6071 8.76794 12.3384 8.50231 14.354C8.48356 14.5071 8.46794 14.8821 8.46794 15.1821C8.46794 16.1165 8.61481 16.829 9.00544 17.8228C9.03669 17.9071 8.98981 18.1134 8.52106 19.854C8.11794 21.3509 8.00231 21.8196 8.01481 21.9134C8.04606 22.1321 8.22419 22.3071 8.44606 22.3259C8.55231 22.3353 9.00544 22.2259 10.4273 21.8446L12.2711 21.3478L12.4429 21.4946C12.9211 21.9009 13.3367 22.1665 13.9273 22.4509C15.2648 23.0915 16.6929 23.2696 18.1554 22.9759C18.5554 22.8978 19.1179 22.729 19.4023 22.6009L19.5679 22.529L21.4867 23.0446C22.5429 23.3259 23.4648 23.5571 23.5304 23.5571C23.6648 23.5571 23.8211 23.4665 23.9179 23.3353C24.0461 23.1634 24.0398 23.1228 23.4898 21.0759L22.9711 19.1384L23.0617 18.904C23.4023 18.0446 23.5398 17.3134 23.5398 16.3853C23.5429 15.3071 23.3273 14.3853 22.8523 13.4165C22.2804 12.2478 21.3711 11.254 20.2867 10.6134C20.1398 10.5259 19.9304 10.3728 19.8211 10.2696C18.8742 9.38525 17.6836 8.779 16.4179 8.53838C16.0554 8.46963 15.8836 8.454 15.3023 8.44463C14.8273 8.43838 14.5242 8.44775 14.3179 8.479ZM15.9711 9.479C17.6117 9.71338 19.0211 10.5946 19.9398 11.9634C20.5648 12.8946 20.8648 13.8321 20.9023 14.9696C20.9273 15.7228 20.8461 16.2915 20.6148 16.9853C20.3054 17.9134 19.6836 18.8509 18.9648 19.4665C17.2586 20.9321 14.9148 21.2915 12.8711 20.3978C12.7211 20.329 12.5523 20.2759 12.4992 20.2759C12.4492 20.2759 12.2773 20.3103 12.1179 20.354C9.97419 20.929 9.24606 21.1196 9.23356 21.1103C9.22731 21.1009 9.41169 20.3853 9.64606 19.5196C9.87731 18.6509 10.0679 17.8978 10.0679 17.8446C10.0679 17.7915 10.0148 17.6228 9.94606 17.4728C9.10544 15.5634 9.36794 13.3478 10.6336 11.6821C11.5461 10.479 12.9648 9.66025 14.4742 9.4665C14.8117 9.42275 15.6211 9.429 15.9711 9.479ZM21.9586 13.854C22.2929 14.5353 22.4898 15.279 22.5336 16.0009C22.5898 16.9634 22.4461 17.7821 22.0679 18.6978C21.9992 18.8603 21.9429 19.0321 21.9429 19.0821C21.9429 19.129 22.1336 19.8759 22.3648 20.7415C22.5961 21.6103 22.7804 22.3259 22.7711 22.3321C22.7617 22.3415 22.0554 22.1603 21.1992 21.929C20.3461 21.7009 19.5898 21.5134 19.5211 21.5134C19.4429 21.5103 19.2804 21.5634 19.0836 21.6478C18.3523 21.9634 17.6617 22.0978 16.8023 22.0978C16.2429 22.0946 15.7398 22.0353 15.3961 21.9259L15.2711 21.8853L15.4586 21.879C17.4336 21.7978 19.2929 20.8353 20.5117 19.2665C21.6992 17.729 22.1679 15.7259 21.7836 13.8103C21.7461 13.629 21.7117 13.4603 21.7023 13.4353C21.6648 13.3071 21.8054 13.5415 21.9586 13.854Z"
@@ -322,7 +333,7 @@ export function AddToChatIcon({ width = 32, height = 32 }: IIcon) {
   );
 }
 
-export function MoreOptionsIcon({ width = 32, height = 32 }: IIcon) {
+export function MoreOptionsIcon({ width = 32, height = 32, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -330,6 +341,7 @@ export function MoreOptionsIcon({ width = 32, height = 32 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <circle cx="12" cy="12" r="3" fill="currentColor" />
       <circle cx="12" cy="20" r="3" fill="currentColor" />
@@ -339,7 +351,7 @@ export function MoreOptionsIcon({ width = 32, height = 32 }: IIcon) {
   );
 }
 
-export function SendIcon({ width = 32, height = 32 }: IIcon) {
+export function SendIcon({ width = 32, height = 32, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -347,6 +359,7 @@ export function SendIcon({ width = 32, height = 32 }: IIcon) {
       viewBox="0 0 31 29"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M14.8337 14.4998H6.9896M6.76726 15.4631L5.47131 19.0898C4.76152 21.076 4.40663 22.0691 4.66131 22.6807C4.88248 23.2119 5.3575 23.6145 5.94366 23.7678C6.61864 23.9442 7.63811 23.5144 9.67705 22.6549L22.7485 17.1443C24.7387 16.3053 25.7338 15.8859 26.0413 15.3031C26.3086 14.7968 26.3086 14.2026 26.0413 13.6964C25.7338 13.1137 24.7387 12.6942 22.7485 11.8552L9.6545 6.3351C7.6217 5.47814 6.60531 5.04966 5.93101 5.22543C5.34541 5.37808 4.87043 5.77967 4.64849 6.3098C4.39293 6.92024 4.74403 7.91123 5.44624 9.89321L6.76978 13.6289C6.89037 13.9693 6.95069 14.1396 6.97448 14.3136C6.99561 14.4681 6.99539 14.6245 6.97385 14.7789C6.94956 14.9529 6.8888 15.1229 6.76726 15.4631Z"
@@ -359,7 +372,7 @@ export function SendIcon({ width = 32, height = 32 }: IIcon) {
   );
 }
 
-export function AddToFriendIcon({ width = 32, height = 32 }: IIcon) {
+export function AddToFriendIcon({ width = 32, height = 32, ...props }: IconsProps) {
   return (
     <svg
       width={width}
@@ -367,6 +380,7 @@ export function AddToFriendIcon({ width = 32, height = 32 }: IIcon) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M14 7.7605C11.9289 7.7605 10.25 9.43943 10.25 11.5105C10.25 13.5816 11.9289 15.2605 14 15.2605C16.0711 15.2605 17.75 13.5816 17.75 11.5105C17.75 9.43943 16.0711 7.7605 14 7.7605Z"
@@ -382,4 +396,87 @@ export function AddToFriendIcon({ width = 32, height = 32 }: IIcon) {
       />
     </svg>
   );
+}
+
+export function CloseEyeIcon({ width = 18, height = 18, ...props }: IconsProps) {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M1.91602 6.60584C1.75078 6.67967 1.56797 6.85194 1.49063 7.00311C1.45898 7.06288 1.42734 7.19295 1.4168 7.29842C1.37813 7.66405 1.5293 7.89608 2.31328 8.69061C2.62266 9.0035 2.7457 9.15116 2.73164 9.18983C2.71758 9.22147 2.43633 9.71717 2.10586 10.2902C1.77188 10.8668 1.48008 11.3871 1.45547 11.4504C1.38516 11.6121 1.3957 11.9074 1.47305 12.0797C1.61016 12.3785 1.93359 12.5859 2.26406 12.5859C2.43633 12.5859 2.68594 12.4769 2.82305 12.3469C2.8793 12.2941 3.19219 11.7844 3.52266 11.2078L4.12734 10.1672L4.30312 10.2691C4.68984 10.4941 5.31211 10.793 5.7375 10.9512C6.13477 11.1023 6.18398 11.1305 6.16992 11.1937C6.15937 11.2359 6.07148 11.7316 5.97305 12.3012C5.85352 12.9937 5.8043 13.3769 5.81836 13.4613C5.93086 14.0519 6.58828 14.3508 7.09101 14.0414C7.39687 13.8515 7.43555 13.7531 7.64648 12.5543C7.74844 11.9707 7.83633 11.489 7.84336 11.4785C7.85039 11.4715 8.01562 11.4785 8.20898 11.4961C8.65898 11.5383 9.34101 11.5383 9.79101 11.4961C9.98437 11.4785 10.1461 11.468 10.1496 11.475C10.1531 11.4785 10.2375 11.939 10.3359 12.5015C10.4344 13.0605 10.5293 13.5668 10.5504 13.623C10.6734 14.0168 11.1762 14.2558 11.6051 14.1258C11.7668 14.0801 12.0023 13.8867 12.0762 13.7461C12.2133 13.4789 12.2098 13.3945 12.0059 12.2308C11.8969 11.6297 11.816 11.1305 11.8195 11.1234C11.8266 11.1199 11.9883 11.0566 12.1816 10.9863C12.5367 10.8562 13.4684 10.4133 13.7285 10.2551L13.8691 10.1672L14.4844 11.2254C15.1594 12.389 15.2297 12.4734 15.5742 12.5473C16.1543 12.6703 16.6781 12.164 16.5762 11.5734C16.5621 11.4855 16.3125 11.0144 15.8941 10.2937L15.2332 9.15819L15.6937 8.68358C16.2457 8.11756 16.4285 7.89959 16.5234 7.69569C16.7027 7.29491 16.5023 6.79569 16.0875 6.60584C15.7641 6.45819 15.3176 6.56717 15.0926 6.84842C14.5125 7.56561 13.7074 8.27928 12.9551 8.74686C12.1289 9.25663 11.1762 9.60116 10.1426 9.76288C9.6082 9.84725 8.3918 9.84725 7.85742 9.76288C5.95547 9.46405 4.3207 8.52538 3.01992 6.98202C2.7457 6.65506 2.54531 6.53905 2.25352 6.53905C2.14102 6.53905 1.99688 6.56717 1.91602 6.60584Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+export function OpenEyeIcon({ width = 18, height = 18, ...props }: IconsProps) {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g clipPath="url(#clip0_52_41)">
+        <path
+          d="M7.3125 9C7.3125 8.06805 8.06805 7.3125 9 7.3125C9.93195 7.3125 10.6875 8.06805 10.6875 9C10.6875 9.93195 9.93195 10.6875 9 10.6875C8.06805 10.6875 7.3125 9.93195 7.3125 9Z"
+          fill="currentColor"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M1.5 9C1.5 10.2295 1.81872 10.6436 2.45617 11.4718C3.72897 13.1253 5.86358 15 9 15C12.1364 15 14.271 13.1253 15.5438 11.4718C16.1812 10.6436 16.5 10.2295 16.5 9C16.5 7.77045 16.1812 7.3564 15.5438 6.52825C14.271 4.87467 12.1364 3 9 3C5.86358 3 3.72897 4.87467 2.45617 6.52825C1.81872 7.3564 1.5 7.77045 1.5 9ZM9 6.1875C7.4467 6.1875 6.1875 7.4467 6.1875 9C6.1875 10.5533 7.4467 11.8125 9 11.8125C10.5533 11.8125 11.8125 10.5533 11.8125 9C11.8125 7.4467 10.5533 6.1875 9 6.1875Z"
+          fill="black"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_52_41">
+          <rect width="18" height="18" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+
+const ICONS = {
+  notification: NotificationIcon,
+  chat: ChatIcon,
+  friends: FriendsIcon,
+  plus: PlusIcon,
+  'add-server': AddServerIcon,
+  microphone: MicrophoneIcon,
+  chevrondown: ChevronDownIcon,
+  headphones: HeadphonesIcon,
+  settings: SettingsIcon,
+  'create-chat': CreateChatIcon,
+  cross: CrossIcon,
+  search: SearchIcon,
+  phone: PhoneIcon,
+  camera: CameraIcon,
+  'add-to-chat': AddToChatIcon,
+  'more-options': MoreOptionsIcon,
+  send: SendIcon,
+  'add-to-friend': AddToFriendIcon,
+  'close-eye': CloseEyeIcon,
+  'open-eye': OpenEyeIcon,
+} as const;
+
+export type IconName = keyof typeof ICONS;
+interface IconComponentProps extends IconsProps {
+  name: IconName;
+}
+
+export function Icon({ name, className, ...props }: IconComponentProps) {
+  const NameIcon = ICONS[name];
+  const classes = className ? `${className} ${name}` : name;
+  return <NameIcon className={classes} {...props} />;
 }

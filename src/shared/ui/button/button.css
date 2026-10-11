@@ -1,0 +1,140 @@
+.button {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-1);
+
+  font-family: var(--font-main);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-md);
+
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+
+  transition:
+    color var(--duration-fast) var(--easing),
+    background-color var(--duration-fast) var(--easing),
+    border-color var(--duration-fast) var(--easing);
+}
+
+.def-btn-large {
+  font-family: var(--font-accent);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-md);
+
+  background-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+
+  width: 158px;
+  height: var(--size-control-md);
+}
+
+.def-btn-medium {
+  font-family: var(--font-accent);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-md);
+
+  background-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+
+  width: 104px;
+  height: var(--size-control-md);
+}
+
+.user-panel-btn {
+  width: var(--size-control-sm);
+  height: var(--size-control-sm);
+
+  padding: var(--space-1);
+  color: var(--color-text-primary);
+}
+
+.user-panel-btn:hover {
+  color: var(--color-accent-hover);
+}
+
+.btn-string-accent {
+  width: fit-content;
+  color: var(--color-accent);
+}
+
+.btn-string-simple {
+  width: fit-content;
+  color: var(--color-text-primary);
+}
+
+.btn-string-danger {
+  width: fit-content;
+  color: var(--color-text-primary);
+}
+
+.btn-string-simple:hover,
+.btn-string-accent:hover {
+  color: var(--color-accent-hover);
+}
+
+.btn-string-simple:active,
+.btn-string-accent:active {
+  color: var(--color-accent-active);
+}
+
+.btn-string-danger:hover {
+  color: var(--color-danger);
+}
+
+.btn-string-danger:active {
+  color: var(--color-danger-active);
+}
+
+.server {
+  width: 48px;
+  height: 48px;
+
+  --border-color: var(--color-text-primary);
+}
+
+.server:hover {
+  --border-color: var(--color-accent-hover);
+}
+
+.user-panel-btn-setting {
+  width: fit-content;
+  height: 26px;
+  border-radius: var(--radius-sm);
+
+  padding: var(--space-1);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-panel-btn-setting:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.settings:hover,
+.chevrondown:hover {
+  color: var(--color-accent-hover);
+}
+
+.microfone {
+  border-right: 1px solid transparent;
+}
+
+.headphones:hover {
+  color: var(--color-accent);
+}
+
+.microfone:hover {
+  color: var(--color-accent-hover);
+  border-right: 1px solid var(--color-bg-app);
+}
+
+.user-panel-btn-setting:has(.chevrondown:hover) .microfone {
+  border-right: 1px solid var(--color-bg-app);
+}

@@ -1,0 +1,125 @@
+.input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+  box-sizing: border-box;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 13px 40px;
+
+  font-family: var(--font-main);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-md);
+
+  color: var(--color-text-inverse);
+  background-color: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+
+  cursor: pointer;
+
+  transition:
+    border-color var(--duration-fast) var(--easing),
+    box-shadow var(--duration-fast) var(--easing);
+}
+.light {
+  color: var(--color-text-inverse);
+  background-color: var(--color-bg-input);
+}
+.dark {
+  color: var(--color-text-primary);
+  background-color: var(--color-text-inverse);
+}
+
+.input-container {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input-icon-left {
+  width: auto;
+  height: auto;
+
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.input-icon-right {
+  width: auto;
+  height: auto;
+
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.input-icon-password {
+  width: auto;
+  height: auto;
+
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.medium {
+  height: var(--size-control-md);
+}
+
+.small {
+  height: var(--size-control-sm);
+}
+
+.input:hover {
+  border: 1px solid var(--color-accent-hover);
+  box-shadow: var(--shadow-accent);
+}
+
+.input:focus::placeholder {
+  color: var(--color-accent);
+}
+
+.input:focus {
+  border: 1px solid var(--color-accent-active);
+}

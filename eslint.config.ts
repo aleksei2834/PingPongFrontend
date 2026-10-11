@@ -1,4 +1,6 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from 'eslint-plugin-storybook';
+
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -10,6 +12,9 @@ import importPlugin from 'eslint-plugin-import';
 import unusedImports from 'eslint-plugin-unused-imports';
 import prettierConfig from 'eslint-config-prettier';
 import boundaries from 'eslint-plugin-boundaries';
+
+const LAYERS = ['app', 'pages', 'widgets', 'features', 'entities', 'shared'] as const;
+const layersBelow = (layer: (typeof LAYERS)[number]) => LAYERS.slice(LAYERS.indexOf(layer) + 1);
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -34,40 +39,20 @@ export default defineConfig([
         version: 'detect',
       },
 
-      'boundaries/elements': [
-        {
-          type: 'shared',
-          pattern: 'src/shared/*',
-        },
+      'import/resolver': {
+        typescript: { project: './tsconfig.app.json' },
+      },
 
-        {
-          type: 'entities',
-          pattern: 'src/entities/*',
-        },
-
-        {
-          type: 'features',
-          pattern: 'src/features/*',
-        },
-
-        {
-          type: 'widgets',
-          pattern: 'src/widgets/*',
-        },
-
-        {
-          type: 'pages',
-          pattern: 'src/pages/*',
-        },
-
-        {
-          type: 'app',
-          pattern: 'src/app/*',
-        },
-      ],
+      'boundaries/elements': LAYERS.map((type) => ({
+        type,
+        pattern: `src/${type}/*`,
+        capture: ['slice'],
+      })),
     },
 
     rules: {
+      'react/prop-types': 'off',
+
       'react/react-in-jsx-scope': 'off',
 
       'import/no-cycle': 'error',
@@ -87,35 +72,33 @@ export default defineConfig([
         },
       ],
 
-      'boundaries/element-types': [
+      'boundaries/dependencies': [
         'error',
         {
           default: 'disallow',
+          policies: [
+            ...LAYERS.map((layer) => ({
+              from: { element: { type: layer } },
+              allow: { to: { element: { types: { anyOf: layersBelow(layer) } } } },
+            })),
 
-          rules: [
             {
-              from: 'shared',
-              disallow: ['entities', 'features', 'widgets', 'pages', 'app'],
+              from: { element: { type: 'shared' } },
+              allow: { to: { element: { type: 'shared' } } },
             },
 
             {
-              from: 'entities',
-              disallow: ['features', 'widgets', 'pages', 'app'],
-            },
-
-            {
-              from: 'features',
-              disallow: ['widgets', 'pages', 'app'],
-            },
-
-            {
-              from: 'widgets',
-              disallow: ['pages', 'app'],
-            },
-
-            {
-              from: 'pages',
-              disallow: ['app'],
+              from: {
+                element: { types: { anyOf: ['app', 'pages', 'widgets', 'features', 'entities'] } },
+              },
+              allow: {
+                to: {
+                  element: {
+                    type: '{{ from.element.types.[0] }}',
+                    captured: { slice: '{{ from.element.captured.slice }}' },
+                  },
+                },
+              },
             },
           ],
         },
@@ -128,4 +111,5 @@ export default defineConfig([
       boundaries,
     },
   },
+  ...storybook.configs['flat/recommended'],
 ]);
